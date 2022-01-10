@@ -1,0 +1,120 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+:root{
+    --bg-color:rgb(23,22,22);
+    --bg-card:rgb(21,28,32);
+    --color-main:#fff;
+}
+html,body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    width:100%;
+    background-color: var(--bg-color);
+    color:var(--color-main);
+    overflow-x: hidden;
+}
+
+
+/* header  */
+header{
+    margin: 2.5rem;
+}
+header span{
+    font-size: 5rem;
+}
+header .landScape-description{
+    margin: 2.8rem 0 2.5rem;
+}
+/* card */
+.card{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.cardItem{
+    width: calc(100%/4 - 3.1rem);
+    background-color: var(--bg-card);
+    border-radius: 1rem;
+    text-align: center;
+}
+.cardItem:hover{
+    box-shadow: 0 0 5px 2px #fff;
+    transition: all .4s;
+    transform: translateY(-20px);
+}
+.cardItem h2{
+    margin-top: 1.1rem;
+}
+.cardImg{
+    margin:0 3.5rem;
+}
+.cardImg img{
+    margin-top: 1.6rem;
+    width:100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+.cardItem .card-content{
+    margin-top: 1.25rem;
+    padding: 0 1rem 2.5rem 1rem;
+}
+/* 476px */
+.selectLandscape{
+    position: fixed;
+    bottom: 2rem;
+    font-size: 3rem;
+    color:#fff;
+    left:50%;
+    transform: translateX(-50%);
+
+}
+
+@media screen and (max-width:1024px) {
+    body{
+        width: 100%;
+    }
+}
+@media screen and (max-width:900px) {
+    
+    .card{
+        flex-wrap: wrap;
+    }
+    .cardItem{
+        width:calc(100%/3 - 20px);
+        margin-bottom: 1rem;
+
+    }
+}
+@media screen and (max-width:600px) {
+    
+    .card{
+        flex-wrap: wrap;
+    }
+    .cardItem{
+        width:calc(100%/2 - 20px);
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width:390px) {
+    header span{
+        font-size: 3rem;
+    }
+    .card{
+        flex-wrap: wrap;
+    }
+    .cardItem{
+        width:calc(100% - 50px);
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width:360px) {
+    header span{
+        font-size: 3rem;
+    }
+    .card{
+        flex-wrap: wrap;
+    }
+    .cardItem{
+        width:calc(100% - 20px);
+        margin-bottom: 1rem;
+    }
+}
